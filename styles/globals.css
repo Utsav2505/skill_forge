@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+.sarabun-thin {
+    font-family: "Sarabun", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .sarabun-extralight {
+    font-family: "Sarabun", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .sarabun-light {
+    font-family: "Sarabun", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .sarabun-regular {
+    font-family: "Sarabun", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .sarabun-medium {
+    font-family: "Sarabun", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .sarabun-semibold {
+    font-family: "Sarabun", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .sarabun-bold {
+    font-family: "Sarabun", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .sarabun-extrabold {
+    font-family: "Sarabun", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .sarabun-thin-italic {
+    font-family: "Sarabun", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .sarabun-extralight-italic {
+    font-family: "Sarabun", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .sarabun-light-italic {
+    font-family: "Sarabun", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .sarabun-regular-italic {
+    font-family: "Sarabun", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .sarabun-medium-italic {
+    font-family: "Sarabun", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .sarabun-semibold-italic {
+    font-family: "Sarabun", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .sarabun-bold-italic {
+    font-family: "Sarabun", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .sarabun-extrabold-italic {
+    font-family: "Sarabun", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+.wholeBody{
+    background-color: #111111   ;
+}
+.logo{
+    margin-left: 1vw;
+    margin-top: 0.6vw;
+}
+.nav{
+    position: fixed;
+    bottom: 2.5vw;
+    display: flex;
+    flex-direction: row;
+    background-color: #1E1E1E;
+    width: 40vw;
+    border-radius: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.1vw 0.5vw;
+}
+.navButton{
+    margin:0.6vw 0.6vw;
+    height: 3vw;
+    width: 12vw;
+    color: white;
+    border: 1px solid white;
+    display: flex;
+    
+    border-radius: 5px;
+    background-color: #1E1E1E;
+    /* padding: 0vw 0.5vw; */
+    padding-bottom: 0.3vw;
+    font-family: Sarabun;
+    font-style: normal;
+    font-weight: 400;
+    cursor: pointer;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}

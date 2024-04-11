@@ -179,3 +179,25 @@
   align-items: center;
   justify-content: center;
 }
+.profileIcon{
+  height: 3vw;
+  width: 3vw;
+  border-radius: 50%;
+  border: 1px solid white;
+  cursor: pointer;
+  overflow: hidden;
+}
+.profileIconLinks{
+  display: flex;
+  flex-direction: column;
+  background-color: #1E1E1E;
+  color: white;
+  width: auto;
+  height: 4vw;
+  padding: 1vw;
+  transform: translateX(-20%);
+  margin-top: 1vw;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+}

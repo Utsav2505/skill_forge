@@ -1,5 +1,6 @@
 import "@styles/globals.css";
 import Header from "../components/Header";
+import Provider from "@components/Provider";
 
 export const metadata = {
   title: "Skill Forge",
@@ -16,12 +17,14 @@ const RootLayout = ({ children }) => {
         />
       </head>
       <body className="wholeBody">
-        <div>
-          <main>
-            <Header />
-            {children}
-          </main>
-        </div>
+        <Provider>
+          <div>
+            <main>
+              <Header />
+              {children}
+            </main>
+          </div>
+        </Provider>
       </body>
     </html>
   );

@@ -157,9 +157,14 @@
   /* animation: slide 0.5s ease-in-out; */
   display: flex;
   flex-direction: row;
+  font-family: Sarabun;
+    font-style: normal;
+    font-weight: 400;
+    cursor: pointer;
 }
 .hidden{
   opacity:0;
+  display: none;
 }
 .pageLink{
   margin:0.6vw 0.6vw;
@@ -200,4 +205,76 @@
   border-radius: 8px;
   justify-content: center;
   align-items: center;
+  font-family: Sarabun;
+    font-style: normal;
+    font-weight: 400;
+    cursor: pointer;
+}
+.banner{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height:40%; 
+  background-color: #b33434;
+  z-index: -1;
+
+}
+.profileBox{
+  position: fixed;
+  top:20%;
+  width: 65%;
+  background-color: white;
+  height: 36vw;
+  margin: 0 auto;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 22px;
+}
+.switch{
+  display: flex;
+  flex-direction: row;
+  height: 3vw;
+  width: 100%;
+}
+.section{
+  width: 311%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 1vw;
+  margin: 1vw;
+  font-family: Sarabun;
+    font-style: normal;
+    font-weight: 400;
+    cursor: pointer;
+}
+.commonProfile{
+  width: 34%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.profilePic{
+  width: 12vw;
+  height: 12vw;
+  border-radius: 50%;
+  border: 2px solid #b33434;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* align-content: center; */
+  margin: 0 auto;
+  margin-top: 8vw;
+  margin-bottom: 0.5vw;
+}
+.fixed_details{
+  margin: 0.1vw auto;
+  text-align: center;
+  /* margin-bottom:0.2vw; */
+  font-family: Sarabun;
+    font-style: normal;
+    font-weight: 400;
 }

@@ -2,6 +2,8 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 import Image from "next/image";
+import Link from "next/link";
+import { Cursor } from "mongoose";
 
 const ProfileButton = () => {
   const { data: session } = useSession();
@@ -29,7 +31,18 @@ const ProfileButton = () => {
         className={isClicked ? "profileIconLinks" : "hidden"}
         onClick={() => setIsClicked(false)}
       >
-        <div style={{ padding: "0.5vw" }}>Profile</div>
+        <div style={{ padding: "0.5vw" }}>
+          <Link
+            href="/profile"
+            style={{
+              cursor: "pointer",
+              textDecoration: "none",
+              color: "white",
+            }}
+          >
+            Profile
+          </Link>
+        </div>
         <div onClick={signOut}>Log out</div>
       </div>
     </>

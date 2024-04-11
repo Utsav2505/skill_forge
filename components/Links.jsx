@@ -28,7 +28,10 @@ const Links = () => {
         </Link>
       </div>
       <div className="pageLink">
-        <Link href="/" style={{ textDecoration: "none", color: "white" }}>
+        <Link
+          href="/interview"
+          style={{ textDecoration: "none", color: "white" }}
+        >
           Mock Interview
         </Link>
       </div>

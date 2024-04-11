@@ -7,6 +7,9 @@ import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 
 const Profile = () => {
   const { data: session } = useSession();
+
+  const sessionId = session?.user._id;
+
   return (
     <>
       {/* banner */}
@@ -23,7 +26,7 @@ const Profile = () => {
             <div className="profilePic">
               <Image src={session?.user.image} width="180" height="180"></Image>
             </div>
-            <div className="fixed_details">{session.user.name}</div>
+            <div className="fixed_details">{session?.user.name}</div>
             <div>
               <p
                 className="fixed_details"
@@ -44,11 +47,11 @@ const Profile = () => {
             <table>
               <tr>
                 <td>Name</td>
-                <td>{session.user.name}</td>
+                <td>{session?.user.name}</td>
               </tr>
               <tr>
                 <td>Employment Status</td>
-                <td></td>
+                <td>{sessionId}</td>
               </tr>
               <tr>
                 <td>Designation</td>

@@ -366,6 +366,18 @@ textarea{
   margin: 0.2vw auto;
   cursor: pointer;
 }
+.exit{
+  color: #DF5757;
+  border: 1px solid #DF5757;
+  margin: 0.2vw auto;
+  cursor: pointer;
+  background-color: #1E1E1E;
+  width: 10vw;
+  height: 3vw;
+  border-radius: 11px;
+  margin: 0 auto;
+  
+}
 .interviewModule{
   width: 80vw;
   height:80vh;

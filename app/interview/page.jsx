@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "@styles/globals.css";
 import PopUpForm from "@components/InterviewForm.jsx";
+import Link from "next/link";
 
 const InterViewPage = () => {
   const [formData, setFormData] = useState(null);
@@ -12,7 +13,7 @@ const InterViewPage = () => {
   const handleFormSubmit = (data) => {
     console.log(data);
     setFormData(data);
-    getQuestion(data);
+    // getQuestion(data);
     // console.log("response sent");
   };
 
@@ -116,6 +117,9 @@ const InterViewPage = () => {
           </div>
         </div>
       </div>
+      <Link href="/" className="exit">
+        Exit
+      </Link>
     </>
   );
 };

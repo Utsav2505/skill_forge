@@ -6,14 +6,15 @@ import { useState, useEffect } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 import ProfileButton from "./ProfileButton";
 const Header = () => {
+  const { data: session } = useSession();
   const isUserLoggedIn = true;
   const [providers, setProviders] = useState(null);
   useEffect(() => {
-    const setProviders = async () => {
+    const setUpProviders = async () => {
       const response = await getProviders();
       setProviders(response);
     };
-    setProviders();
+    setUpProviders();
   }, []);
 
   return (
@@ -47,7 +48,7 @@ const Header = () => {
             marginRight: "2vw",
           }}
         >
-          {isUserLoggedIn ? (
+          {session?.user ? (
             <ProfileButton />
           ) : (
             <>

@@ -278,3 +278,13 @@
     font-style: normal;
     font-weight: 400;
 }
+.detailsTable{
+  margin: auto auto;
+  
+}
+td{
+  font-family: Sarabun;
+    font-style: normal;
+    font-weight: 400;
+    padding: 0.5vw 2vw;
+}

@@ -17,7 +17,7 @@ const Profile = () => {
           <div className="section">Edit Profile</div>
           <div className="section">Resume/CV</div>
         </div>
-        <div>
+        <div style={{ display: "flex", flexDirection: "row" }}>
           {/* common profile */}
           <div className="commonProfile">
             <div className="profilePic">
@@ -36,7 +36,37 @@ const Profile = () => {
                 {session?.user.email}
               </p>
             </div>
+            {/* show location */}
             <div></div>
+          </div>
+          {/* show profile details */}
+          <div className="detailsTable">
+            <table>
+              <tr>
+                <td>Name</td>
+                <td>{session.user.name}</td>
+              </tr>
+              <tr>
+                <td>Employment Status</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Designation</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Phone No.</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Email Verification</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Bio</td>
+                <td></td>
+              </tr>
+            </table>
           </div>
           <div></div>
         </div>

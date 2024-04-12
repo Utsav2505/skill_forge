@@ -475,12 +475,16 @@ textarea {
   display: flex;
   flex-direction: row;
   margin: 0 auto;
+  width: 95%;
+  align-content: center;
 }
 .chatbox {
   width: 75%;
   background-color: #1e1e1e;
   border-radius: 22px;
   margin-left: 1vw;
+  display: flex;
+  flex-direction: column;
 }
 .chatmodule {
   width: 85%;
@@ -496,10 +500,11 @@ textarea {
   margin-right: 1vw;
 }
 .text-area {
-  width: 80%;
+  width: 95%;
   border: 1px solid white;
   border-radius: 8px;
   height: 3vw;
+  margin: 1vw 0.5vw;
 }
 .sendIcon {
   width: 3vw;
@@ -508,6 +513,12 @@ textarea {
   justify-content: center;
   align-items: center;
   height: 3vw;
+  margin: 1vw 0.5vw;
   border: 1px solid white;
   border-radius: 8px;
+  cursor: pointer;
+}
+.chatDisplay {
+  width: 85%;
+  height: 90%;
 }

@@ -52,10 +52,14 @@ const Chat = () => {
         {/* bot box */}
         <div className="chatbox">
           {/* chatbox */}
-          <div></div>
+          <div className="chatDisplay"></div>
           {/* inputbox */}
           <div className="input-area">
-            <div className="text-area">Text Area</div>
+            {/* <div className="text-area">Text Area</div> */}
+            <textarea
+              className="text-area"
+              placeholder="Enter your query........"
+            ></textarea>
             <div className="sendIcon">
               <svg
                 width="31"

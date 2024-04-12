@@ -1,138 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 .sarabun-thin {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-  }
-  
-  .sarabun-extralight {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-  }
-  
-  .sarabun-light {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  .sarabun-regular {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .sarabun-medium {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .sarabun-semibold {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-  }
-  
-  .sarabun-bold {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .sarabun-extrabold {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-  }
-  
-  .sarabun-thin-italic {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 100;
-    font-style: italic;
-  }
-  
-  .sarabun-extralight-italic {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 200;
-    font-style: italic;
-  }
-  
-  .sarabun-light-italic {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-  .sarabun-regular-italic {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .sarabun-medium-italic {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-  }
-  
-  .sarabun-semibold-italic {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 600;
-    font-style: italic;
-  }
-  
-  .sarabun-bold-italic {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-  
-  .sarabun-extrabold-italic {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 800;
-    font-style: italic;
-  }
-  
-.wholeBody{
-    background-color: #111111   ;
+  font-family: "Sarabun", sans-serif;
+  font-weight: 100;
+  font-style: normal;
 }
-.logo{
-    margin-left: 1vw;
-    margin-top: 0.6vw;
+
+.sarabun-extralight {
+  font-family: "Sarabun", sans-serif;
+  font-weight: 200;
+  font-style: normal;
 }
-.nav{
-    position: fixed;
-    bottom: 2.5vw;
-    display: flex;
-    flex-direction: row;
-    background-color: #1E1E1E;
-    width: 40vw;
-    border-radius: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0.1vw 0.5vw;
+
+.sarabun-light {
+  font-family: "Sarabun", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
-.navButton{
-    margin:0.6vw 0.6vw;
-    height: 3vw;
-    width: 12vw;
-    color: white;
-    border: 1px solid white;
-    display: flex;
-    
-    border-radius: 5px;
-    background-color: #1E1E1E;
-    /* padding: 0vw 0.5vw; */
-    padding-bottom: 0.3vw;
-    font-family: Sarabun;
-    font-style: normal;
-    font-weight: 400;
-    cursor: pointer;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+
+.sarabun-regular {
+  font-family: "Sarabun", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sarabun-medium {
+  font-family: "Sarabun", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.sarabun-semibold {
+  font-family: "Sarabun", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.sarabun-bold {
+  font-family: "Sarabun", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.sarabun-extrabold {
+  font-family: "Sarabun", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.sarabun-thin-italic {
+  font-family: "Sarabun", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.sarabun-extralight-italic {
+  font-family: "Sarabun", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.sarabun-light-italic {
+  font-family: "Sarabun", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.sarabun-regular-italic {
+  font-family: "Sarabun", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.sarabun-medium-italic {
+  font-family: "Sarabun", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.sarabun-semibold-italic {
+  font-family: "Sarabun", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.sarabun-bold-italic {
+  font-family: "Sarabun", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.sarabun-extrabold-italic {
+  font-family: "Sarabun", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.wholeBody {
+  background-color: #111111;
+}
+.logo {
+  margin-left: 1vw;
+  margin-top: 0.6vw;
+}
+.nav {
+  position: fixed;
+  bottom: 2.5vw;
+  display: flex;
+  flex-direction: row;
+  background-color: #1e1e1e;
+  width: 40vw;
+  border-radius: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.1vw 0.5vw;
+}
+.navButton {
+  margin: 0.6vw 0.6vw;
+  height: 3vw;
+  width: 12vw;
+  color: white;
+  border: 1px solid white;
+  display: flex;
+
+  border-radius: 5px;
+  background-color: #1e1e1e;
+  /* padding: 0vw 0.5vw; */
+  padding-bottom: 0.3vw;
+  font-family: Sarabun;
+  font-style: normal;
+  font-weight: 400;
+  cursor: pointer;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 @keyframes slide {
   from {
@@ -144,10 +144,10 @@
     transform: translateY(-100%);
   }
 }
-.linkBox{
+.linkBox {
   height: 4vw;
   width: 41vw;
-  background-color: #1E1E1E;
+  background-color: #1e1e1e;
   position: fixed;
   bottom: 7.5vw;
   border-radius: 8px;
@@ -158,16 +158,16 @@
   display: flex;
   flex-direction: row;
   font-family: Sarabun;
-    font-style: normal;
-    font-weight: 400;
-    cursor: pointer;
+  font-style: normal;
+  font-weight: 400;
+  cursor: pointer;
 }
-.hidden{
-  opacity:0;
+.hidden {
+  opacity: 0;
   display: none;
 }
-.pageLink{
-  margin:0.6vw 0.6vw;
+.pageLink {
+  margin: 0.6vw 0.6vw;
   /* height: 3vw; */
   width: 9vw;
   color: white;
@@ -184,7 +184,7 @@
   align-items: center;
   justify-content: center;
 }
-.profileIcon{
+.profileIcon {
   height: 3vw;
   width: 3vw;
   border-radius: 50%;
@@ -192,10 +192,10 @@
   cursor: pointer;
   overflow: hidden;
 }
-.profileIconLinks{
+.profileIconLinks {
   display: flex;
   flex-direction: column;
-  background-color: #1E1E1E;
+  background-color: #1e1e1e;
   color: white;
   width: auto;
   height: 4vw;
@@ -206,22 +206,21 @@
   justify-content: center;
   align-items: center;
   font-family: Sarabun;
-    font-style: normal;
-    font-weight: 400;
-    cursor: pointer;
+  font-style: normal;
+  font-weight: 400;
+  cursor: pointer;
 }
-.banner{
+.banner {
   position: fixed;
   top: 0;
   width: 100%;
-  height:40%; 
+  height: 40%;
   background-color: #b33434;
   z-index: -1;
-
 }
-.profileBox{
+.profileBox {
   position: fixed;
-  top:20%;
+  top: 20%;
   width: 65%;
   background-color: white;
   height: 36vw;
@@ -230,13 +229,13 @@
   transform: translate(-50%);
   border-radius: 22px;
 }
-.switch{
+.switch {
   display: flex;
   flex-direction: row;
   height: 3vw;
   width: 100%;
 }
-.section{
+.section {
   width: 311%;
   align-items: center;
   text-align: center;
@@ -244,11 +243,11 @@
   padding: 1vw;
   margin: 1vw;
   font-family: Sarabun;
-    font-style: normal;
-    font-weight: 400;
-    cursor: pointer;
+  font-style: normal;
+  font-weight: 400;
+  cursor: pointer;
 }
-.commonProfile{
+.commonProfile {
   width: 34%;
   height: 100%;
   display: flex;
@@ -256,7 +255,7 @@
   justify-content: center;
   align-content: center;
 }
-.profilePic{
+.profilePic {
   width: 12vw;
   height: 12vw;
   border-radius: 50%;
@@ -270,30 +269,29 @@
   margin-top: 8vw;
   margin-bottom: 0.5vw;
 }
-.fixed_details{
+.fixed_details {
   margin: 0.1vw auto;
   text-align: center;
   /* margin-bottom:0.2vw; */
   font-family: Sarabun;
-    font-style: normal;
-    font-weight: 400;
+  font-style: normal;
+  font-weight: 400;
 }
-.detailsTable{
+.detailsTable {
   margin: auto auto;
-  
 }
-td{
+td {
   font-family: Sarabun;
-    font-style: normal;
-    font-weight: 400;
-    padding: 0.5vw 2vw;
+  font-style: normal;
+  font-weight: 400;
+  padding: 0.5vw 2vw;
 }
-.popup-form{
+.popup-form {
   position: fixed;
   top: 25%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #1E1E1E;
+  background-color: #1e1e1e;
   display: flex;
   flex-direction: row;
   width: 50%;
@@ -305,91 +303,90 @@ td{
   margin: 0 auto;
   height: auto;
 }
-.firstCol{
+.firstCol {
   display: flex;
   flex-direction: column;
   width: 25vw;
   text-align: center;
   color: white;
   font-family: Sarabun;
-    font-style: normal;
-    font-weight: 400;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2vw;
-    margin-top: 1vw;
+  font-style: normal;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2vw;
+  margin-top: 1vw;
 }
-.secondCol{
+.secondCol {
   display: flex;
   flex-direction: column;
   width: 25vw;
   color: white;
   font-family: Sarabun;
-    font-style: normal;
-    font-weight: 400;
-    text-align: center;
-    transform: translate(-10%);
-    margin-top: 1vw;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  transform: translate(-10%);
+  margin-top: 1vw;
 }
-select{
+select {
   width: 15vw;
   height: 2.5vw;
   border-radius: 5px;
   border: 1px solid white;
-  background-color: #1E1E1E;
+  background-color: #1e1e1e;
   color: white;
   text-align: center;
   margin: 0.2vw 0;
 }
-label{
+label {
   margin-top: 1vw;
   color: white;
 }
-textarea{
+textarea {
   width: 22vw;
   height: 18vh;
   border-radius: 5px;
   border: 1px solid white;
-  background-color: #1E1E1E;
+  background-color: #1e1e1e;
   color: white;
-  
+
   margin: 0.2vw auto;
   margin-bottom: 1vw;
 }
-.submitButton{
+.submitButton {
   width: 10vw;
   height: 3vw;
   border-radius: 11px;
-  border: 1px solid #4CCE1E;
-  background-color: #1E1E1E;
-  color: #4CCE1E;
+  border: 1px solid #4cce1e;
+  background-color: #1e1e1e;
+  color: #4cce1e;
   margin: 0.2vw auto;
   cursor: pointer;
 }
-.exit{
-  color: #DF5757;
-  border: 1px solid #DF5757;
+.exit {
+  color: #df5757;
+  border: 1px solid #df5757;
   margin: 0.2vw auto;
   cursor: pointer;
-  background-color: #1E1E1E;
+  background-color: #1e1e1e;
   width: 10vw;
   height: 3vw;
   border-radius: 11px;
   margin: 0 auto;
-  
 }
-.interviewModule{
+.interviewModule {
   width: 80vw;
-  height:80vh;
+  height: 80vh;
   /* background-color: white; */
   margin: 0 auto;
   display: flex;
   flex-direction: row;
 }
-.userPanel{
+.userPanel {
   width: 45%;
   height: 100%;
-  background-color: #1E1E1E;
+  background-color: #1e1e1e;
   color: white;
   display: flex;
   flex-direction: column;
@@ -398,10 +395,10 @@ textarea{
   border-radius: 22px;
   margin-right: 1vw;
 }
-.botPanel{
+.botPanel {
   width: 45%;
   height: 100%;
-  background-color: #1E1E1E;
+  background-color: #1e1e1e;
   color: white;
   display: flex;
   flex-direction: column;
@@ -410,7 +407,7 @@ textarea{
   border-radius: 22px;
   margin-left: 1vw;
 }
-.players{
+.players {
   width: 45%;
   height: 2vw;
   color: white;
@@ -422,26 +419,25 @@ textarea{
   align-items: center;
   margin: 0.5vw auto;
 }
-.displayText{
+.displayText {
   width: 90%;
   height: 40%;
   border: 1px solid white;
   border-radius: 8px;
   margin: 1vw auto;
-  overflow-y: "scroll",
+  overflow-y: "scroll";
 }
-.chatTextUser{
-  margin:0.5vw auto;
+.chatTextUser {
+  margin: 0.5vw auto;
   font-family: Sarabun;
-    font-style: normal;
-    font-weight: 400;
+  font-style: normal;
+  font-weight: 400;
 }
-.chatTextBot{
-  margin:0.5vw auto;
+.chatTextBot {
+  margin: 0.5vw auto;
   font-family: Sarabun;
-    font-style: normal;
-    font-weight: 400;
-
+  font-style: normal;
+  font-weight: 400;
 }
 
 .loader {
@@ -473,4 +469,45 @@ textarea{
   100% {
     transform: rotate(360deg);
   }
+}
+.input-area {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+.chatbox {
+  width: 75%;
+  background-color: #1e1e1e;
+  border-radius: 22px;
+  margin-left: 1vw;
+}
+.chatmodule {
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  height: 85vh;
+  margin: 0 auto;
+}
+.sideDash {
+  width: 20%;
+  background-color: #1e1e1e;
+  border-radius: 22px;
+  margin-right: 1vw;
+}
+.text-area {
+  width: 80%;
+  border: 1px solid white;
+  border-radius: 8px;
+  height: 3vw;
+}
+.sendIcon {
+  width: 3vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 3vw;
+  border: 1px solid white;
+  border-radius: 8px;
 }

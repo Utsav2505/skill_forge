@@ -23,7 +23,10 @@ const Links = () => {
         </Link>
       </div>
       <div className="pageLink">
-        <Link href="/" style={{ textDecoration: "none", color: "white" }}>
+        <Link
+          href="/chat-zen"
+          style={{ textDecoration: "none", color: "white" }}
+        >
           ask Zen
         </Link>
       </div>

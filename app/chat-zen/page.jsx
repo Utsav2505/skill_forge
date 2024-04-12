@@ -10,7 +10,7 @@ const Chat = () => {
   const handleSendChat = async () => {
     if (!chatInput.trim()) return;
     console.log(chatInput);
-    const apiUrl = `https://7fb5-34-42-50-157.ngrok-free.app/chat?question=${chatInput}`;
+    const apiUrl = `https://9738-34-66-29-203.ngrok-free.app/chat?question=${chatInput}`;
     const response = await fetch(apiUrl, {
       method: "POST",
       headers: {
@@ -18,8 +18,8 @@ const Chat = () => {
       },
     });
     const data = await response.json();
-    // console.log(data);
-    setChatMessages([
+    console.log(data);
+    +setChatMessages([
       ...chatMessages,
       { message: data.output, type: "incoming" },
     ]);
@@ -59,8 +59,10 @@ const Chat = () => {
             <textarea
               className="text-area"
               placeholder="Enter your query........"
+              value={chatInput}
+              onChange={(e) => setChatInput(e.target.value)}
             ></textarea>
-            <div className="sendIcon">
+            <div className="sendIcon" onClick={handleSendChat}>
               <svg
                 width="31"
                 height="26"

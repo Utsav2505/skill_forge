@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI Career Counselor Web App
+
+Welcome to our AI Career Counselor web application! This project aims to provide users with AI-powered career counseling services, including resume assistance, interview preparation, and skill-based advice.
+
+## Features
+
+- **AI Chat Bot**: Utilizes Llama 2 7b Chat HF to answer questions related to resumes, jobs, and skills.
+- **AI Mock Interviewer**: Conducts voice conversations for interview practice, with personalized job descriptions, titles, and resume inputs.
+- **Resume Scorer**: Evaluates resumes and provides feedback on areas of improvement.
+
+## Technologies Used
+
+- **Llama 2 7b Chat HF**: AI chat bot for natural language processing.
+- **Langchain**: Language processing for interview simulations.
+- **Next.js**: React framework for server-side rendering and routing.
+- **React.js**: JavaScript library for building user interfaces.
+- **MongoDB**: NoSQL database for storing user data.
+- **Google OAuth 2.0**: Authentication and authorization.
+- **Node.js**: JavaScript runtime environment for backend development.
+
+## Architecture
+
+The web app is built on a robust architecture, utilizing the latest technologies to ensure scalability, performance, and security.
 
 ## Getting Started
 
-First, run the development server:
+To run the project locally, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone this repository.
+2. Install dependencies with `npm install`.
+3. Set up environment variables for MongoDB connection, Google OAuth credentials, etc.
+4. Run the development server with `npm run dev`.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contributing
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+We welcome contributions from the community! If you'd like to contribute to this project, please follow these guidelines:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them with descriptive messages.
+4. Push your changes to your fork.
+5. Submit a pull request to the `main` branch of the original repository.
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the [MIT License](LICENSE).

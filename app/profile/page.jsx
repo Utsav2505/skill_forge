@@ -1,5 +1,5 @@
 "use client";
-import Nav from "@components/nav.jsx";
+import Nav from "@components/Nav";
 import React from "react";
 import "@styles/globals.css";
 import Image from "next/image";

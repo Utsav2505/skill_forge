@@ -9,9 +9,16 @@ const Chat = () => {
   const [chatInput, setChatInput] = useState("");
   const [chatMessages, setChatMessages] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [pdfSubmitted, setPdfSubmitted] = useState(false); // State to track whether PDF is submitted
 
   const handleSendChat = async () => {
+    var startTime = performance.now();
     if (!chatInput.trim()) return;
+    if (!pdfSubmitted) {
+      // Show error message if PDF is not submitted
+      console.error("Please submit the PDF before sending the chat.");
+      return;
+    }
 
     // Add user's question to chat messages
     setChatMessages((prevMessages) => [
@@ -20,7 +27,7 @@ const Chat = () => {
     ]);
     setLoading(true);
     // Call API and add response to chat messages
-    const apiUrl = `https://5f54-35-193-77-52.ngrok-free.app/chat?question=${chatInput}`;
+    const apiUrl = `https://dc45-34-30-227-133.ngrok-free.app/chat?question=${chatInput}`;
     const response = await fetch(apiUrl, {
       method: "POST",
       headers: {
@@ -35,6 +42,10 @@ const Chat = () => {
     setLoading(false);
     // Clear input after sending
     setChatInput("");
+    var endTime = performance.now();
+
+    var timeTaken = endTime - startTime;
+    console.log("Time taken: " + timeTaken + " milliseconds");
   };
 
   //resume input
@@ -47,6 +58,8 @@ const Chat = () => {
     if (file && file.type === "application/pdf") {
       // Set selected file name
       setSelectedFileName(file.name.replace(" pdf", ""));
+      // Set pdfSubmitted to true when PDF is dropped
+      setPdfSubmitted(true);
       // Handle PDF file
       console.log("PDF file dropped:", file.name);
       // You can add further processing here
@@ -55,7 +68,7 @@ const Chat = () => {
 
       try {
         const response = await fetch(
-          " https://5f54-35-193-77-52.ngrok-free.app/upload",
+          "https://dc45-34-30-227-133.ngrok-free.app/upload",
           {
             method: "POST",
             body: formData,
@@ -79,6 +92,8 @@ const Chat = () => {
     if (file && file.type === "application/pdf") {
       // Set selected file name
       setSelectedFileName(file.name);
+      // Set pdfSubmitted to true when PDF is selected
+      setPdfSubmitted(true);
       // Handle PDF file
       console.log("PDF file selected:", file.name);
       // You can add further processing here
@@ -130,18 +145,9 @@ const Chat = () => {
               <p>{selectedFileName}</p>
             </div>
           ) : (
-            <svg
-              width="36"
-              height="36"
-              viewBox="0 0 36 36"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M18 0C8.05645 0 0 8.05645 0 18C0 27.9435 8.05645 36 18 36C27.9435 36 36 27.9435 36 18C36 8.05645 27.9435 0 18 0ZM28.4516 20.0323C28.4516 20.5113 28.0597 20.9032 27.5806 20.9032H20.9032V27.5806C20.9032 28.0597 20.5113 28.4516 20.0323 28.4516H15.9677C15.4887 28.4516 15.0968 28.0597 15.0968 27.5806V20.9032H8.41935C7.94032 20.9032 7.54839 20.5113 7.54839 20.0323V15.9677C7.54839 15.4887 7.94032 15.0968 8.41935 15.0968H15.0968V8.41935C15.0968 7.94032 15.4887 7.54839 15.9677 7.54839H20.0323C20.5113 7.54839 20.9032 7.94032 20.9032 8.41935V15.0968H27.5806C28.0597 15.0968 28.4516 15.4887 28.4516 15.9677V20.0323Z"
-                fill="#808080"
-              />
-            </svg>
+            <div className="error">
+              <p>Please submit a PDF file.</p>
+            </div>
           )}
 
           <input

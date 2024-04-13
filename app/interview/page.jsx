@@ -31,7 +31,10 @@ const InterViewPage = () => {
     console.log("response sent");
 
     axios
-      .post("https://d6ad-34-28-119-83.ngrok-free.app/get-question/", parameter)
+      .post(
+        "https://dc45-34-30-227-133.ngrok-free.app/get-question/",
+        parameter
+      )
       .then((response) => {
         console.log("Question:", response.data.question);
         setReceivedQuestion(response.data.question); // Set received question

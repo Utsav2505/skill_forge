@@ -27,7 +27,7 @@ const Chat = () => {
     ]);
     setLoading(true);
     // Call API and add response to chat messages
-    const apiUrl = `https://4c6a-34-30-227-133.ngrok-free.app/chat?question=${chatInput}`;
+    const apiUrl = `https://7047-34-30-227-133.ngrok-free.app/chat?question=${chatInput}`;
     const response = await fetch(apiUrl, {
       method: "POST",
       headers: {
@@ -68,7 +68,7 @@ const Chat = () => {
 
       try {
         const response = await fetch(
-          "https://4c6a-34-30-227-133.ngrok-free.app/upload",
+          "https://7047-34-30-227-133.ngrok-free.app/upload",
           {
             method: "POST",
             body: formData,

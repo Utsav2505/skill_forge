@@ -364,16 +364,31 @@ textarea {
   margin: 0.2vw auto;
   cursor: pointer;
 }
-.exit {
+.exit,
+.exitBtn {
   color: #df5757;
   border: 1px solid #df5757;
-  margin: 0.2vw auto;
+  /* margin: 0.2vw auto; */
   cursor: pointer;
   background-color: #1e1e1e;
-  width: 10vw;
-  height: 3vw;
+  width: 5vw;
+  height: 2vw;
   border-radius: 11px;
   margin: 0 auto;
+  font-family: Sarabun;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1vw;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  padding: 0vw 0vw;
+  justify-content: center;
+}
+.exitBtn {
+  position: absolute;
+  bottom: 5%;
+  text-decoration: none;
 }
 .interviewModule {
   width: 80vw;
@@ -519,6 +534,133 @@ textarea {
   cursor: pointer;
 }
 .chatDisplay {
-  width: 85%;
+  width: 100%;
   height: 90%;
+  font-family: Sarabun;
+  font-style: normal;
+  font-weight: 400;
+  color: white;
+  overflow-y: scroll;
+}
+.chat {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.5vw;
+  /* height: 3vw; */
+  /* margin-top: 2vw; */
+}
+.chat p {
+  border: 1px solid white;
+  /* height: 3vw; */
+}
+.outgoing {
+  transform: translateX(5%);
+  border-radius: 0px 8px 8px 8px;
+  margin-top: 0.2vw;
+  margin-left: 2vw;
+}
+.incoming {
+  /* transform: translateX(5%); */
+  border-radius: 8px 0px 8px 8px;
+  margin-top: 0.2vw;
+  margin-right: 4vw;
+}
+p {
+  padding: 0.5vw;
+}
+.message {
+  margin-top: 0.5vw;
+  margin-left: 1vw;
+  margin-bottom: 0.5vw;
+}
+.profileIconBot {
+  height: 3vw;
+  width: 3vw;
+  border-radius: 50%;
+  border: 1px solid white;
+  /* cursor: pointer; */
+  overflow: hidden;
+  transform: translateX(1800%);
+  display: flex;
+  flex-direction: row;
+  padding: 0 auto;
+  justify-content: center;
+  background-image: linear-gradient(45deg, blue, red);
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  margin-top: 1.1vw;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #111111;
+  border-radius: 11px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.dropZone {
+  width: 90%;
+  height: 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 11px;
+  background-color: #d9d9d9;
+  margin-top: 0.5vw;
+  cursor: pointer;
+}
+.drop-zone--over {
+  border-color: white;
+}
+.drop-zone__input {
+  display: none;
+}
+.sideDash {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+.drop-zone__thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #cccccc;
+  background-size: cover;
+  position: relative;
+}
+
+.drop-zone__thumb::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.75);
+  font-size: 14px;
+  text-align: center;
+}
+.resumeFile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  font-family: Sarabun;
+  font-style: normal;
+  font-weight: 400;
 }

@@ -929,6 +929,38 @@ box-shadow: 0 0 2px 1px white;
   margin: 0;
   z-index: 2;
 }
-.filters{
-  
+.filter-sort{
+  margin: 0 auto;
+  width: 40vw;
+  height: 3vw;
+  background-color: black;
+  border-radius: 11px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-family: Sarabun;
+  font-style: normal;
+  font-weight: 600;
+  color: white;
+}
+.filter-sort label{
+  margin: 0 0.5vw;
+  padding: 0.5vw;
+}
+.filter-sort label img{
+  margin: 0 0.3vw;
+  transform: translateY(0.1vw);
+}
+.filter-sort select{
+  width: 10vw;
+  height: 2vw;
+  border-radius: 5px;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin: 0 2vw 0 0.5vw ;
+
 }

@@ -57,7 +57,10 @@ const IndexPage = () => {
       <h6 className="subtitle">Job Search</h6>
       <div className="container">
         <div className="filter-sort">
-          <label>Filter by Title:</label>
+          <label>
+            <img src="./filter.svg" />
+            Filter :
+          </label>
           <select value={filterTitle} onChange={handleFilterChange}>
             <option value="">All</option>
             {/* Extracting unique job titles */}
@@ -68,7 +71,10 @@ const IndexPage = () => {
             ))}
           </select>
 
-          <label>Sort by:</label>
+          <label>
+            <img src="./sort.svg" />
+            Sort by:
+          </label>
           <select value={sortOption} onChange={handleSortChange}>
             <option value="">None</option>
             <option value="titleAsc">Title (A-Z)</option>

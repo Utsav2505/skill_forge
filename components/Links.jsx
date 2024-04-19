@@ -13,7 +13,10 @@ const Links = () => {
       }}
     >
       <div className="pageLink">
-        <Link href="/" style={{ textDecoration: "none", color: "white" }}>
+        <Link
+          href="/job-list"
+          style={{ textDecoration: "none", color: "white" }}
+        >
           Job Search
         </Link>
       </div>

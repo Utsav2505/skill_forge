@@ -18,7 +18,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div>
+    <div className="headerPanel">
       <header style={{ display: "flex", flexDirection: "row" }}>
         {/* <Image src="./public/Logo.svg" alt="logo" width="100" height="100" /> */}
         <div>
@@ -43,9 +43,8 @@ const Header = () => {
         <div
           style={{
             position: "fixed",
-            right: "0",
-            marginTop: "0.6vw",
-            marginRight: "2vw",
+            right: "1vw",
+            top: "1vw",
           }}
         >
           {session?.user ? (

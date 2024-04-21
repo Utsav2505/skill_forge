@@ -9,19 +9,43 @@ const InterViewPage = () => {
   const [questions, setQuestions] = useState([]);
   const [receivedQuestion, setReceivedQuestion] = useState("");
   const [loading, setLoading] = useState(false);
+  const [userTranscripts, setUserTranscripts] = useState([]);
+  const [botQuestions, setBotQuestions] = useState([]);
+  const displayRefUser = useRef(null);
+  const displayRefBot = useRef(null);
+
+  // Speech recognition state
+  const [listening, setListening] = useState(false);
+  const [transcript, setTranscript] = useState("");
+
+  function speak(text) {
+    let synth = window.speechSynthesis;
+    let utter = new SpeechSynthesisUtterance();
+    if (synth.speaking) {
+      console.error("speechSynthesis.speaking");
+      return;
+    }
+    if (text.trim() !== "") {
+      utter.text = text;
+      synth.speak(utter);
+    }
+    if (!synth.speaking) {
+      synth.cancel();
+    }
+  }
 
   const handleFormSubmit = (data) => {
-    console.log(data);
     setFormData(data);
-    // getQuestion(data);
-    // console.log("response sent");
+    // startListening(); // Start speech recognition when form is submitted
+    getQuestion(data, "");
   };
 
   const axios = require("axios");
 
-  function getQuestion(data) {
+  function getQuestion(data, answer) {
+    console.log("Hello, I am here");
     const parameter = {
-      answer: displayText.join("\n"),
+      answer: answer,
       interview_type: data.type,
       level: data.level,
       job_title: data.title,
@@ -31,15 +55,14 @@ const InterViewPage = () => {
     console.log("response sent");
 
     axios
-      .post(
-        "https://dc45-34-30-227-133.ngrok-free.app/get-question/",
-        parameter
-      )
+      .post("https://7c10-35-196-76-5.ngrok-free.app/get-question", parameter)
       .then((response) => {
         console.log("Question:", response.data.question);
-        setReceivedQuestion(response.data.question); // Set received question
-        setQuestions([...questions, response.data.question]); // Add received question to the list of questions
+        setReceivedQuestion(response.data.question);
+        setBotQuestions([...botQuestions, response.data.question]);
         setLoading(false);
+        speak(response.data.question);
+        startListening();
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -47,26 +70,66 @@ const InterViewPage = () => {
       });
   }
 
-  //display and input of text
-  const [inputText, setInputText] = useState("");
-  const [displayText, setDisplayText] = useState([]);
-  const displayRef = useRef(null);
+  // Speech recognition functions
+  const recognition = useRef(null);
 
-  // Function to handle form submission for the second form
-  const handleSubmit2 = (e) => {
-    e.preventDefault();
-    if (inputText.trim() !== "") {
-      setDisplayText([...displayText, inputText]);
-      setInputText("");
-      // After updating the displayText state, call the API
-      getQuestion(formData);
+  const startListening = () => {
+    const SpeechRecognition =
+      window.SpeechRecognition || window.webkitSpeechRecognition;
+    recognition.current = new SpeechRecognition();
+    recognition.current.lang = "en-US";
+    recognition.current.onstart = () => {
+      setListening(true);
+    };
+    recognition.current.onresult = (event) => {
+      const transcript2 = event.results[0][0].transcript;
+      setTranscript(transcript2);
+      console.log("Transcript: ", transcript2);
+      setUserTranscripts([...userTranscripts, transcript2]);
+    };
+    recognition.current.onerror = (event) => {
+      console.error("Error occurred: ", event.error);
+    };
+    recognition.current.onend = () => {
+      console.log("Listening stopped");
+      stopListening();
+    };
+    recognition.current.start();
+  };
+
+  const stopListening = () => {
+    if (recognition.current) {
+      console.log("Stopping listening");
+      recognition.current.stop();
+      setListening(false);
     }
   };
 
-  // Scroll to the bottom of the div when displayText changes
+  // Handle form submission for the second form
+  const handleSubmit2 = () => {
+    console.log("goin to submit this", transcript);
+    console.log(transcript.length);
+    if (transcript.trim() !== "" && formData) {
+      console.log("goin to submit");
+      setUserTranscripts([...userTranscripts, transcript]);
+      setTranscript(""); // Clear transcript after submission
+      getQuestion(formData, transcript);
+    }
+  };
+
   useEffect(() => {
-    displayRef.current.scrollTop = displayRef.current.scrollHeight;
-  }, [displayText]);
+    if (transcript.trim() !== "" && formData) {
+      handleSubmit2();
+    }
+  }, [transcript, formData]);
+
+  useEffect(() => {
+    displayRefUser.current.scrollTop = displayRefUser.current.scrollHeight;
+  }, [userTranscripts]);
+
+  useEffect(() => {
+    displayRefBot.current.scrollTop = displayRefBot.current.scrollHeight;
+  }, [botQuestions]);
 
   return (
     <>
@@ -79,15 +142,15 @@ const InterViewPage = () => {
           {/* visualizer */}
           <div>Equalizer</div>
           {/* text display for user input */}
-          <div className="displayText" ref={displayRef}>
-            {displayText.map((text, index) => (
+          <div className="displayText" ref={displayRefUser}>
+            {userTranscripts.map((text, index) => (
               <div key={index} className="chatTextUser">
                 Utsav : {text}
               </div>
             ))}
           </div>
           {/* second form for user input */}
-          <div>
+          {/* <div>
             <form onSubmit={handleSubmit2}>
               <input
                 type="text"
@@ -96,7 +159,7 @@ const InterViewPage = () => {
               />
               <button type="submit">Submit</button>
             </form>
-          </div>
+          </div> */}
         </div>
         <div className="botPanel">
           <div className="players">
@@ -105,8 +168,8 @@ const InterViewPage = () => {
           {/* visualizer */}
           <div>Equalizer</div>
           {/* display past and received questions */}
-          <div className="displayText" ref={displayRef}>
-            {questions.map((question, index) => (
+          <div className="displayText" ref={displayRefBot}>
+            {botQuestions.map((question, index) => (
               <div key={index} className="chatTextBot">
                 Zen : {question}
               </div>

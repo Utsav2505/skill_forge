@@ -15,7 +15,7 @@ const Nav = ({ page }) => {
   return (
     <>
       <div
-        className={isClicked ? "linkBox" : "hidden"}
+        className={isClicked ? "linkBox" : "slide-out"}
         onClick={() => setIsClicked(false)} // Close links if clicked outside
       >
         <Links />

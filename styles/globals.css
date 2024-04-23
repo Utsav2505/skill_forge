@@ -156,14 +156,25 @@
   width:1.2vw;
   height:3vh;
 }
+.hidden{
+  display: none;
+
+}
 @keyframes slide {
   from {
-    transform: translateX(-50%);
-    transform: translateY(0);
+    transform: translate(-50%,120%);
   }
   to {
-    transform: translateX(-50%);
-    transform: translateY(-100%);
+    transform: translate(-50%,0%);
+  }
+}
+@keyframes slideout {
+  from {
+    transform: translate(-50%,0%);
+  }
+  to {
+    
+    transform: translate(-50%,120%);
   }
 }
 .linkBox {
@@ -174,20 +185,33 @@
   bottom: 7.5vw;
   border-radius: 8px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%,0%);
   opacity: 1;
-  /* animation: slide 0.5s ease-in-out; */
   display: flex;
   flex-direction: row;
   font-family: Sarabun;
   font-style: normal;
   font-weight: 400;
-  /* cursor: pointer; */
+  animation: slide 0.2s ease-out;
   z-index: 2;
 }
-.hidden {
-  opacity: 0;
-  display: none;
+.slide-out{
+  height: 4vw;
+  width: 41vw;
+  background-color: #1e1e1e;
+  position: fixed;
+  bottom: 7.5vw;
+  border-radius: 8px;
+  left: 50%;
+  transform: translate(-50%,120%);
+  opacity: 1;
+  display: flex;
+  flex-direction: row;
+  font-family: Sarabun;
+  font-style: normal;
+  font-weight: 400;
+  animation: slideout 0.2s ease-out;
+  z-index: 2;
 }
 .pageLink {
   margin: 0.6vw 0.6vw;
@@ -215,6 +239,7 @@
   border: 1px solid white;
   cursor: pointer;
   overflow: hidden;
+  /* transform: translateX(-30%); */
 }
 .profileIcon Image{
   width: 1vw;
@@ -237,6 +262,10 @@
   font-family: Sarabun;
   font-style: normal;
   font-weight: 400;
+  margin-right: -1vw;
+  /* cursor: pointer; */
+}
+.userLink{
   cursor: pointer;
 }
 .userLink:after{
@@ -244,7 +273,7 @@
   bottom: 0;
   content: "";
   display: block;
-  height: 1px;
+  height: 0.26vh;
   left: 50%;
   /* position: absolute; */
   background: #fff;

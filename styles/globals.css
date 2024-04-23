@@ -230,6 +230,46 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  font-size: 1.2vw;
+}
+.sign-in{
+  cursor: pointer;
+  font-family: Sarabun;
+  font-style: normal;
+  font-weight: 400;
+  transition: all .2s;
+  padding: 1vh 1vw;
+  border-radius: 100px;
+  background: #ffffff;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 1vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+/* .sign-in svg{
+  width: 2.2vw;
+  height: 2.2vw;
+} */
+.sign-in:hover {
+  background: #f0f0f0;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 1);
+}
+.sign-in > svg {
+  width: 34px;
+  margin-left: 10px;
+  transition: transform .3s ease-in-out;
+}
+
+.sign-in:hover svg {
+  transform: translateX(5px);
+}
+.sign-in:active {
+  transform: scale(0.95);
 }
 
 .profileIcon {

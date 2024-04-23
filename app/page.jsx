@@ -33,6 +33,7 @@ const Home = () => {
           <video src="./main.mp4" autoPlay loop muted className="home-video" />
         </div>
       </div>
+      <div className="section-2"></div>
     </div>
   );
 };

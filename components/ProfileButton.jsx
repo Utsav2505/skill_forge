@@ -25,13 +25,18 @@ const ProfileButton = () => {
   return (
     <>
       <div onClick={toggleProfile} className="profileIcon">
-        <Image src={session?.user.image} width="45" height="45"></Image>
+        <Image
+          src={session?.user.image}
+          width="100"
+          height="100"
+          style={{ width: "3vw", height: "6vh" }}
+        ></Image>
       </div>
       <div
         className={isClicked ? "profileIconLinks" : "hidden"}
         onClick={() => setIsClicked(false)}
       >
-        <div style={{ padding: "0.5vw" }}>
+        <div style={{ padding: "0.5vw" }} className="userLink">
           <Link
             href="/profile"
             style={{
@@ -43,7 +48,9 @@ const ProfileButton = () => {
             Profile
           </Link>
         </div>
-        <div onClick={signOut}>Log out</div>
+        <div onClick={signOut} className="userLink">
+          Log out
+        </div>
       </div>
     </>
   );

@@ -16,12 +16,17 @@ const Links = () => {
         <Link
           href="/job-list"
           style={{ textDecoration: "none", color: "white" }}
+          className="userLink"
         >
           Job Search
         </Link>
       </div>
       <div className="pageLink">
-        <Link href="/" style={{ textDecoration: "none", color: "white" }}>
+        <Link
+          href="/"
+          style={{ textDecoration: "none", color: "white" }}
+          className="userLink"
+        >
           Score Resume
         </Link>
       </div>
@@ -29,6 +34,7 @@ const Links = () => {
         <Link
           href="/chat-zen"
           style={{ textDecoration: "none", color: "white" }}
+          className="userLink"
         >
           ask Zen
         </Link>
@@ -37,6 +43,7 @@ const Links = () => {
         <Link
           href="/interview"
           style={{ textDecoration: "none", color: "white" }}
+          className="userLink"
         >
           Mock Interview
         </Link>

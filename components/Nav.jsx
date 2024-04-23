@@ -38,7 +38,7 @@ const Nav = ({ page }) => {
           }}
           onClick={toggleLinks}
         >
-          <div style={{ marginRight: "1vw" }}>Features</div>
+          <div style={{ marginRight: "0.8vw" }}>Features</div>
           <div style={{ transform: "translateY(0.2vw)" }}>
             <svg
               xmlns="http://www.w3.org/2000/svg"

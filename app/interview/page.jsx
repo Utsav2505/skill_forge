@@ -31,6 +31,7 @@ const InterViewPage = () => {
     }
     if (!synth.speaking) {
       synth.cancel();
+      // startListening();
     }
   }
 
@@ -62,7 +63,11 @@ const InterViewPage = () => {
         setBotQuestions([...botQuestions, response.data.question]);
         setLoading(false);
         speak(response.data.question);
-        startListening();
+
+        const intervalId = setInterval(startListening(), 1000);
+        setTimeout(() => {
+          clearInterval(intervalId);
+        }, 10000);
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -74,35 +79,52 @@ const InterViewPage = () => {
   const recognition = useRef(null);
 
   const startListening = () => {
+    console.log("now Listening");
     const SpeechRecognition =
       window.SpeechRecognition || window.webkitSpeechRecognition;
-    recognition.current = new SpeechRecognition();
-    recognition.current.lang = "en-US";
-    recognition.current.onstart = () => {
-      setListening(true);
+    const recognition = new SpeechRecognition();
+    recognition.lang = "en-US";
+
+    let listeningTimeout;
+
+    recognition.onstart = () => {
+      console.log("Listening started");
+      clearTimeout(listeningTimeout); // Clear previous timeout if any
+      listeningTimeout = setTimeout(() => {
+        console.log("Minimum listening time reached");
+        recognition.stop();
+      }, 10000); // Stop after 10 seconds
     };
-    recognition.current.onresult = (event) => {
+
+    recognition.onresult = (event) => {
       const transcript2 = event.results[0][0].transcript;
-      setTranscript(transcript2);
       console.log("Transcript: ", transcript2);
       setUserTranscripts([...userTranscripts, transcript2]);
     };
-    recognition.current.onerror = (event) => {
+
+    recognition.onerror = (event) => {
       console.error("Error occurred: ", event.error);
     };
-    recognition.current.onend = () => {
+
+    recognition.onend = () => {
       console.log("Listening stopped");
-      stopListening();
+      clearTimeout(listeningTimeout); // Clear the timeout when listening stops
+      // You may choose to start listening again here if needed
     };
-    recognition.current.start();
+
+    recognition.start();
   };
 
   const stopListening = () => {
     if (recognition.current) {
-      console.log("Stopping listening");
-      recognition.current.stop();
-      setListening(false);
+      console.log("Stopping listening up");
+      setTimeout(() => {
+        console.log("Stopping listening");
+        recognition.current.stop();
+        setListening(false);
+      }, 50000); // Adjust the delay time as needed (in milliseconds)
     }
+    console.log("Stopping listening down");
   };
 
   // Handle form submission for the second form
